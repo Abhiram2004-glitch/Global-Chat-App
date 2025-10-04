@@ -1,0 +1,9 @@
+{
+  "name": "server",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "set GOCACHE=%USERPROFILE%\\AppData\\Local\\go-build&& set LocalAppData=%USERPROFILE%\\AppData\\Local&& go run .",
+    "build": "go build -o dist/server ."
+  }
+}

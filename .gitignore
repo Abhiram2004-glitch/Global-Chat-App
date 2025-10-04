@@ -1,0 +1,72 @@
+# ------------------------------------------------------
+# Node / Next.js
+# ------------------------------------------------------
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+.npm/
+.npm-cache/
+
+# Build output
+.next/
+out/
+build/
+dist/
+
+# Debug / Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Testing
+coverage/
+
+# Turbo
+.turbo/
+
+# Vercel
+.vercel/
+
+# Misc
+.DS_Store
+*.swp
+
+# ------------------------------------------------------
+# Go
+# ------------------------------------------------------
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go coverage files
+*.cover
+*.cov
+*.cov.out
+*.prof
+*.pprof
+
+# Go build artifacts
+bin/
+# ------------------------------------------------------
+# Certificates / Secrets
+# ------------------------------------------------------
+# Ignore PEM certs everywhere
+**/ca.pem
+**/*.pem
+
+# Ignore env files anywhere in the tree
+**/.env
+**/.env.*
