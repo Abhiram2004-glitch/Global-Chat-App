@@ -41,7 +41,7 @@ func NewKafkaProducer() (*KafkaProducer, error) {
 	// SASL PLAIN mechanism
 	mech := plain.Mechanism{
 		Username: "avnadmin",
-		Password: "AVNS_fZkCpTacY805AAWya8c",
+		Password: "",
 	}
 
 	// Dialer with SASL & TLS
@@ -54,7 +54,7 @@ func NewKafkaProducer() (*KafkaProducer, error) {
 
 	// Kafka writer
 	writer := kafka.NewWriter(kafka.WriterConfig{
-		Brokers: []string{"kafka-2f5890e4-firevan500-4371.g.aivencloud.com:23641"},
+		Brokers: []string{""},
 		Topic:   "MESSAGES",
 		Balancer: &kafka.LeastBytes{},
 		Dialer:   dialer,
@@ -107,7 +107,7 @@ func NewKafkaConsumer(groupID string) (*KafkaConsumer, error) {
 
 	mech := plain.Mechanism{
 		Username: "avnadmin",
-		Password: "AVNS_fZkCpTacY805AAWya8c",
+		Password: "",
 	}
 
 	dialer := &kafka.Dialer{
@@ -118,7 +118,7 @@ func NewKafkaConsumer(groupID string) (*KafkaConsumer, error) {
 	}
 
 	reader := kafka.NewReader(kafka.ReaderConfig{
-		Brokers: []string{"kafka-2f5890e4-firevan500-4371.g.aivencloud.com:23641"},
+		Brokers: []string{""},
 		Topic:   "MESSAGES",
 		GroupID: groupID, // consumer group
 		Dialer:  dialer,
